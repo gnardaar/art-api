@@ -2,7 +2,7 @@
  * Function to get painting info from Chicago API
  */
 
- async function clickedEvent(img_index, item_index){
+async function clickedEvent(img_index, item_index) {
     // Use painting ID from img attributes to identify painting
     let painting = document.getElementsByTagName('img')[img_index].attributes[1].value
 
@@ -34,8 +34,8 @@
     displayInfo(paintingInfo, img_index);
 }
 
-function getPainting(id, event){
-    switch(id){
+function getPainting(id, event) {
+    switch (id) {
         case 'fig1': {
             event.stopPropagation();
             clickedEvent(0, 0);
@@ -69,7 +69,7 @@ function getPainting(id, event){
     }
 }
 
-function displayInfo(info, figure_num){
+function displayInfo(info, figure_num) {
     console.log(figure_num)
     target_figure = document.getElementsByTagName('figcaption')[figure_num]
     target_figure.className = 'caption_style'
@@ -78,8 +78,8 @@ function displayInfo(info, figure_num){
         It was painted using ${info.medium.toLowerCase()}.`
 }
 
-function closeInfo(event,info,figure_num){
-    target_figure = document.getElementsByTagName('figcaption')[figure_num]
-    target_figure.className = 'caption_style'
-    target_figure.innerHTML = ' '
-}
+// function closeInfo(event, info, figure_num) {
+//     target_figure = document.getElementsByTagName('figcaption')[figure_num]
+//     target_figure.className = 'caption_style'
+//     target_figure.innerHTML = ' '
+// }
