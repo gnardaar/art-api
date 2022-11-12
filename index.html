@@ -1,52 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-<section class="container">
-    <div class="row">
-        <div class="row">
-          <div class="col-xs-1-12">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Title</h3>
-                <p class="card-text">Text</p>
-                <img src="" alt="">
-              </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <title>Chicago Art Institute API</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Chicago Art Institute</h1>
+        <h2 class="text-center">to learn more about the paintings click on the image below
+        </h2>
+        <div class="container gallery">
+            <div class="row">
+                <figure class="col-md" id="fig1" onclick="event.stopPropagation(); getPainting(this.id, event)">
+                    <img src="/static/13568-self-portrait-1.jpg" id="13568"
+                        alt="Self-Portrait by Paul Gavarni, painted in France in 1842."
+                        class="gallery_img img-fluid border rounded">
+                    <figcaption onclick="event.closeInfo()"></figcaption>
+                </figure>
+                <figure class="gallery_item gallery_item-2 col-md" id="fig2"
+                    onclick="event.stopPropagation(); getPainting(this.id, event)">
+                    <img src="/static/3450-church-of-england-2.jpg" id="3450" width="563" height="800"
+                        alt="Church of England by Edward Zier, painted in France in c. 1875"
+                        class="gallery_img img-fluid border rounded">
+                    <figcaption onclick="event.stopPropagation()"></figcaption>
+                </figure>
             </div>
-          </div>
-          <div class="col-xs-1-12">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Title</h3>
-                <p class="card-text">Text</p>
-                <img src="" alt="">
-              </div>
+            <div class="row">
+                <figure class="gallery_item gallery_item-3 col-md" id="fig3"
+                    onclick="event.stopPropagation(); getPainting(this.id, event)">
+                    <img src="/static/9343-the-rug-weaver-3.jpg" id="9343"
+                        alt="The Rug Weaver by Gustave Baumann, painted in United States in 1912."
+                        class="gallery_img img-fluid border rounded">
+                    <figcaption onclick="event.stopPropagation()"></figcaption>
+                </figure>
+                <figure class="gallery_item gallery_item-4 col-md" id="fig4"
+                    onclick="event.stopPropagation(); getPainting(this.id, event)">
+                    <img src="/static/3464-the-palizada-river-4.jpg" id="3464"
+                        alt="The Palizada River from Estampas de Yucatan by Alfredo Zalce"
+                        class="gallery_img img-fluid border rounded">
+                    <figcaption onclick="event.stopPropagation()"></figcaption>
+                </figure>
             </div>
-          </div>
+            <div class="row">
+                <figure class="gallery_item gallery_item-5 col-md" id="fig5"
+                    onclick="event.stopPropagation(); getPainting(this.id, event)">
+                    <img src="/static/3220-lithopath-at-the-lockport-...-5.jpg" id="3220"
+                        alt="he Creole by Marie Laurencin" class="gallery_img img-fluid border rounded">
+                    <figcaption onclick="event.stopPropagation()"></figcaption>
+                </figure>
+                <figure class="gallery_item gallery_item-6 col-md" id="fig6"
+                    onclick="event.stopPropagation(); getPainting(this.id, event)">
+                    <img src="/static/3430-echoppe-d'etameur-6.jpg" id="3430"
+                        alt="Echoppe d'Etameur, from Vingt Lithographies du Vieux Paris by Samuel Chamberlain, painted in unknown origin in 1924. "
+                        class="gallery_img img-fluid border rounded">
+                    <figcaption onclick="event.stopPropagation()"></figcaption>
+                </figure>
+            </div>
         </div>
     </div>
-</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
 
-
-
-
-
-
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
 </html>

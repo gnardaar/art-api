@@ -1,0 +1,35 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    background-color: whitesmoke;
+}
+
+figure{
+    padding: 3px;
+}
+
+figure:hover{
+    background: radial-gradient(white,rgba(0, 0, 0, 0.486));
+    border-radius: 14px;
+    height:fit-content;
+    width: fit-content;
+}
+
+.caption_style{
+    color: rgb(111, 111, 111);
+    font-weight: 700;
+    font-size: 25px;
+    background-color:rgb(215, 215, 176);
+    border: 1px solid black;
+    box-shadow: 12px 12px rgba(65, 64, 64, 0.514);
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+img{
+    border-radius: 14px;
+}
+figcaption:hover{
+    cursor:crosshair;
+}
